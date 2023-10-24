@@ -1,0 +1,52 @@
+const unsigned int MAX_LMSG=4;
+
+void setup() {
+  pinMode(4,OUTPUT);
+  pinMode(5,OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop(){
+  static char msg[MAX_LMSG];
+  static unsigned int MSG_POS=0;
+  char t_msg;
+  int vel=0;
+  
+  /*Serial.available legge nel buffer e ritorna 
+  il numero di caratteri contenuti; Serial.read 
+  legge il primo carattere del buffer facendo slittare
+  indietro i successivi (ad ogni lettura il primo
+  carattere del buffer viene cancellato a meno che non 
+  sia salvato in una variabile char*/
+    
+  while(Serial.available()>0) 
+  {
+    t_msg=Serial.read();
+
+    /*la lettura termina o con il carattere terminatore
+    o quando la posizione di lettura supera il massimo 
+    sopra indicato*/
+
+    if(t_msg!='\n' && MSG_POS<MAX_LMSG-1)
+    {
+      msg[MSG_POS++]=t_msg;
+    }
+    else
+    {
+      msg[MSG_POS]='\0';
+      Serial.println(msg);
+      /*atoi per funzionare correttamente non deve leggere
+      fine messaggio un carattere terminatore ma un carattere 
+      nullo*/
+      vel=atoi(msg);
+      Serial.println(vel);
+      MSG_POS=0;
+    }
+  }
+  digitalWrite(4,LOW);
+  digitalWrite(5,HIGH);
+  analogWrite(3,vel);*/  
+  delay(5000);
+  digitalWrite(4,LOW);
+  digitalWrite(5,LOW);
+}
