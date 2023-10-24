@@ -18,7 +18,8 @@ void loop(){
 	analogWrite(3,vel); //pin 3 per pwm
 	delay(100);
   }
-  delay(100);
+  Serial.println("Ciclo terminato");
+  delay(1000);
 }
 
 /* la velocità minima impostata su 80 e non su 0 perchè 
