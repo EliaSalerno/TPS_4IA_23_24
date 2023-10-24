@@ -1,0 +1,25 @@
+
+void setup() {
+  pinMode(4,OUTPUT);
+  pinMode(5,OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop(){
+  int vel=0;
+  vel=analogRead(A0); //A0 pin per lettura analogica
+
+  /*la funzione map() è qui utilizzata con lo scopo 
+  di rapportare il segnale analogico a quello accettato 
+  dal pin EN1 del chip l293d, il range in entrata da tutti i 
+  componenti presenti nel testo dell'attività va da 0 a 1023; 
+  è buona consuetudine registrare il valore medio ambientale,
+  e per farlo si può fare questa operazione anche nel setup*/
+
+  vel=map(vel,0,1023,90,255); 
+  Serial.println(vel);
+  digitalWrite(4,LOW);
+  digitalWrite(5,HIGH);
+  analogWrite(3,vel);
+  delay(100);
+}
