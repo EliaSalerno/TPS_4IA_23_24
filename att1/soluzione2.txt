@@ -1,0 +1,29 @@
+
+void setup() {
+  pinMode(4,OUTPUT); 
+  //i pin digitali devono essere inizializzati
+  pinMode(5,OUTPUT);
+  Serial.begin(9600);  
+  /*9600 sono i baudrate e deve 
+  coincidere con quella espressa sul motitor seriale*/
+}
+
+void loop(){
+  int vel=0;
+  //impostare i pin 4 e 5 così per dare una direzione di 
+  //rotazione al motore
+  digitalWrite(4,LOW);
+  digitalWrite(5,HIGH);
+  vel=random(100,255);
+  Serial.prinln(vel);
+  analogWrite(3,vel);
+  delay(100);
+}
+
+/* la velocità minima impostata su 80 e non su 0 perchè 
+il motore è sottoalimentato dato che arduino dispone solo di 5V
+mentre per funzionare bene necessita di almento 9V, perciò
+sotto tale frequenza il motore rimane fermo; la massima a 255
+perchè coincide con il valore massimo impostabile*/
+
+//a tale conclusione i ragazzi ci devono arrivare da soli
