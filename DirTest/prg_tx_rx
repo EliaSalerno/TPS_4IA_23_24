@@ -7,5 +7,6 @@ velocità minima di rotazione.
 Nel caso in cui il valore di lum/temp sia maggiore del 40% rispetto a quello medio, l'attuatore provvede a segnalare un problema 
 mediante il monitor seriale e accende la ventola a metà velocità.
 Nel caso di delta superiore allora mette la ventola al massimo e carica un messaggio differente.
+Fare il test con i due arduino collegati via pin tx-rx.
 
 ----2------
