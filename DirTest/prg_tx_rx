@@ -1,0 +1,11 @@
+Questo testo per prendere appunti sul test. 
+----1------
+Obiettivo: un arduino deve controllare il livello di luminusità/temperatura dell'ambiente e segnalare eventuali cambiamenti all'altro arduino
+che provvederà ad attuare una soluzione diversa in base ai valori ricevuti.
+Nel caso in cui il valore di lum/temp sia maggiore del 20% a quello medio rilevato in condizioni ottimali accende la ventola alla
+velocità minima di rotazione.
+Nel caso in cui il valore di lum/temp sia maggiore del 40% rispetto a quello medio, l'attuatore provvede a segnalare un problema 
+mediante il monitor seriale e accende la ventola a metà velocità.
+Nel caso di delta superiore allora mette la ventola al massimo e carica un messaggio differente.
+
+----2------
