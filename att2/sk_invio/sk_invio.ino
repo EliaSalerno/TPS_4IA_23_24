@@ -1,4 +1,4 @@
-const unsigned int MAX_LMSG=2;
+const unsigned int MAX_LMSG=1;
 
 void setup() {
   // put your setup code here, to run once:
