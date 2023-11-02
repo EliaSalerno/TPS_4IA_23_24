@@ -17,8 +17,9 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   unsigned int b[8]; // array in cui salvare i bit quando li legge
-  unsigned int t=0;  // valore temporaneo per il primo bit
+  float t=0;  // valore temporaneo per il primo bit
   unsigned int c=0;  // contatore per i cicli
+  static char s;
 
   t=digitalRead(7);
   if(t==0){     //appena becca il valore 0 parte la lettura
@@ -27,15 +28,20 @@ void loop() {
       b[c]=digitalRead(7);
       delayMicroseconds(833);
     }
-    for(c=0;c<4;c++){    // ciclo per l'inversione dell'array
-      b[c]=b[c]+b[7-c];
+    /*for(c=0;c<4;c++){    // ciclo per l'inversione dell'array però inutile per la corretta
+      b[c]=b[c]+b[7-c];    // conversione in carattere
       b[7-c]=b[c]-b[7-c];
       b[c]=b[c]-b[7-c];
+    }*/
+    //Serial.println("----");
+    for(c=0;c<8;c++){    // per calcolare l'intero corrispondente al binario anche se 
+      t+=b[c]*pow(2,c);  // su una variabile float
+    // diciamo che la funzione pow lavora con i float perciò ragionare con interi porta
+    // problemi. Perciò ho convertito t in float e alla fine riconvertito in int dopo aver
+    // fatto la round cioè l'arrotondamento... non so perchè la funzione int sul valore
+    // float effetti indesiderati. 
     }
-    Serial.println("----");
-    Serial.println(97);
-    for(c=0;c<8;c++){    // per stampare il risultato 
-      Serial.print(b[c]);
-    }
+    s=int(round(t));
+    Serial.println(s);
   }
 }
