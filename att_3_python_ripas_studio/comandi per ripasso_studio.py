@@ -73,3 +73,36 @@ print(a)
 print(b+nome+" |")
 print(a)
 
+# usiamo il la preposizione "in" per controllare se determinati caratteri
+# sono presenti in una stringa
+
+studenti="I seguenti studenti sono andati in gita"
+if("non sono" in studenti):
+    print("Alunni in gita")
+else:
+    print("Alunni non in gita")
+
+studenti="I seguenti studenti sono andati in gita"
+if("sono" in studenti):
+    print("Alunni in gita")
+else:
+    print("Alunni non in gita")
+
+# come estrarre una sottostringa sapendone l'inizio e la fine
+
+b="Ciao a tutti"
+print(b[2:8]) # se si toglie il valore finale estrae dal secondo carattere sino all fine
+# se si toglie il primo valore parte dall'inizio fino all'ottavo carattere
+# se si usano valori negativi si parte dalla fine per il conteggio
+print(b[-8:-2])
+
+# operatori
+
+a="-"
+c=a*len(b)
+print(c)
+print(b)
+
+# list comprehension
+list=["apple","banana","cherry"]
+[print(x) for x in list]
