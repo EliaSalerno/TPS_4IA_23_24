@@ -55,14 +55,14 @@ n="""+------+------------+
 | nome |"""
 print(n,nome) #per vedere cosa succede provare a stampare l’output di tutto ciò presente nel pdf
 
-# le stringhe sono array
-
-a="Ciao a tutti"
-print(a[1])
+# Qui lavoriamo su ciascun carattere della stringa "Ciao"
 
 for x in "Ciao":
     print(x)
     print(" ")
+
+# Qui operiamo su una struttura simile ad una tabella con l'obiettivo di
+# adattarla alla dimensione del contenuto
 
 a="+------+-"
 b="| nome | "
@@ -72,3 +72,4 @@ a=a+"-+"
 print(a)
 print(b+nome+" |")
 print(a)
+
