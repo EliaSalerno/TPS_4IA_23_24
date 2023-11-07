@@ -1,4 +1,4 @@
-ELENCO COMANDI A CASO PER RIPASSARE/STUDIARE PYTHON
+# ELENCO COMANDI A CASO PER RIPASSARE/STUDIARE PYTHON
 
 # Si usa per commentare
 #per importare funzioni non presenti nella libreria standard di python
@@ -60,14 +60,9 @@ print(n,nome) #per vedere cosa succede provare a stampare l’output di tutto ci
 a="Ciao a tutti"
 print(a[1])
 
-# Qui lavoriamo su ciascun carattere della stringa "Ciao"
-
 for x in "Ciao":
     print(x)
     print(" ")
-
-# Qui operiamo su una struttura simile ad una tabella con l'obiettivo di
-# adattarla alla dimensione del contenuto
 
 a="+------+-"
 b="| nome | "
