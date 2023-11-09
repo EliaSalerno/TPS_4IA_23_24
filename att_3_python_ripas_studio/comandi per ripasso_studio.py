@@ -104,9 +104,9 @@ print(c)
 print(b)
 
 # list comprehension
-<<<<<<< HEAD
-list=["apple","banana","cherry"]
-[print(x) for x in list]
+
+list2=["apple","banana","cherry"]
+[print(x) for x in list2]
 
 # lavorare con gli oggetti
 class persona:
@@ -116,25 +116,22 @@ class persona:
         self.eta=e
     def presentazione(self):   #metodo di una classe
         print("Mi chiamo ",self.nome,self.cognome," ed ho ",self.eta," anni.")
-#   def __repr__(self): #metodo utile per la stampa a schermo
-#        return '({n}; {c}; {e})'.format(n=self.nome, c=self.cognome, e=self.eta)
+    def __repr__(self): #metodo utile per la stampa a schermo
+        return '({n}; {c}; {e})'.format(n=self.nome, c=self.cognome, e=self.eta)
     def carica(self):
-        self.nome=input("Inserire il nome dell'alunno")
-        self.cognome=input("Inserire il cognome dell'alunno")
-        self.eta=input("Inserire l'età dell'alunno")
-
+        self.nome=input("Inserire il nome ")
+        self.cognome=input("Inserire il cognome ")
+        self.eta=input("Inserire gli anni ")
 
 
 b=[persona("name","",0) for i in range(2)]
-,,,
+'''
 a= "+-"+"-"*max(len("nome"),len("cognome"))+"-+"
 a1="| Nome    | "
 a2="| Cognome | "
-,,,
+'''
 print(b)
 
-b[0].carica(b[0])
-=======
 list2=["apple","banana","cherry"]
 [print(x) for x in list2]
 
@@ -150,4 +147,6 @@ lista1=["apple","banana","cherry"]
 
 lista=list((nome,cognome,matricola))
 print(lista)
->>>>>>> 88d5913cbb387eb2e6b66cd8ddaa2c0dfe1af10c
+b[0].presentazione()
+b[0].carica()
+print(b[0])

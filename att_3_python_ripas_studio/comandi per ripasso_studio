@@ -128,18 +128,20 @@ class persona:
         self.cognome=input("Inserire il cognome dell'alunno")
         self.eta=input("Inserire l'età dell'alunno")
 
+    def carica(self):
+        self.nome=input("Inserire il nome ")
+        self.cognome=input("Inserire il cognome ")
+        self.eta=input("Inserire gli anni ")
+
+
 b=[persona("name","",0) for i in range(2)]
-,,,
+'''
 a= "+-"+"-"*max(len("nome"),len("cognome"))+"-+"
 a1="| Nome    | "
 a2="| Cognome | "
-,,,
+'''
 print(b)
 
-b[0].carica(b[0])
-
-
-#ancora liste
 list2=["apple","banana","cherry"]
 [print(x) for x in list2]
 
@@ -155,4 +157,9 @@ lista1=["apple","banana","cherry"]
 
 lista=list((nome,cognome,matricola))
 print(lista)
+
+b[0].presentazione()
+b[0].carica()
+
+print(b[0])
 
