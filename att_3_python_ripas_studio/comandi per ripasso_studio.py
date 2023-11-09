@@ -106,3 +106,30 @@ print(b)
 # list comprehension
 list=["apple","banana","cherry"]
 [print(x) for x in list]
+
+# lavorare con gli oggetti
+class persona:
+    def __init__(self,n,c,e):
+        self.nome=n #attributi di una classe
+        self.cognome=c
+        self.eta=e
+    def presentazione(self):   #metodo di una classe
+        print("Mi chiamo ",self.nome,self.cognome," ed ho ",self.eta," anni.")
+#   def __repr__(self): #metodo utile per la stampa a schermo
+#        return '({n}; {c}; {e})'.format(n=self.nome, c=self.cognome, e=self.eta)
+    def carica(self):
+        self.nome=input("Inserire il nome dell'alunno")
+        self.cognome=input("Inserire il cognome dell'alunno")
+        self.eta=input("Inserire l'età dell'alunno")
+
+
+
+b=[persona("name","",0) for i in range(2)]
+,,,
+a= "+-"+"-"*max(len("nome"),len("cognome"))+"-+"
+a1="| Nome    | "
+a2="| Cognome | "
+,,,
+print(b)
+
+b[0].carica(b[0])
