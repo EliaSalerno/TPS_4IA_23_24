@@ -104,6 +104,7 @@ print(c)
 print(b)
 
 # list comprehension
+<<<<<<< HEAD
 list=["apple","banana","cherry"]
 [print(x) for x in list]
 
@@ -133,3 +134,20 @@ a2="| Cognome | "
 print(b)
 
 b[0].carica(b[0])
+=======
+list2=["apple","banana","cherry"]
+[print(x) for x in list2]
+
+
+# fare attenzione a non chiamare mai una lista "list", perchè in caso sia utile
+# utilizzare la constract list questa va in conflitto con la variabile
+# list comprehension
+
+lista1=["apple","banana","cherry"]
+[print(x) for x in lista1]
+
+# per creare una lista si può usare la construct list()
+
+lista=list((nome,cognome,matricola))
+print(lista)
+>>>>>>> 88d5913cbb387eb2e6b66cd8ddaa2c0dfe1af10c
