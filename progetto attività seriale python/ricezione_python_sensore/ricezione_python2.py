@@ -18,9 +18,10 @@ valoreSensore="0000"
 vuoto="................"
 while True:
     print(arduino.in_waiting)
-    if arduino.in_waiting>31:
-        buffer_dati=arduino.read(32)
-        buffer=struct.unpack(FORMATO,buffer_dati)
+    if arduino.in_waiting > 31:
+        buffer=struct.unpack(FORMATO,arduino.read(32))
+#        buffer_dati=arduino.read(32)
+#        buffer=struct.unpack(FORMATO,buffer_dati)
         id=buffer[0].decode()
         mittente=buffer[1].decode()
         destinatario=buffer[2].decode()
@@ -33,5 +34,5 @@ while True:
             print("Tipologia: "+tipo)
             print("Valore ricevuto: "+valoreSensore)
             print(vuoto)
-        buffer_dati=b''
+        buffer_dati=""
     time.sleep(0.9)
