@@ -108,8 +108,7 @@ print(b)
 list2=["apple","banana","cherry"]
 [print(x) for x in list2]
 
-# lavorare con gli oggetti
-class persona:
+# lavorare con gli oggetti persona:
     def __init__(self,n,c,e):
         self.nome=n #attributi di una classe
         self.cognome=c
